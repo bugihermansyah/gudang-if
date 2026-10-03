@@ -1,0 +1,22 @@
+{
+  "profile": "product-admin",
+  "sourceRoots": ["resources/js"],
+  "locale": "id-ID",
+  "canonicalMap": "UX-CONTRACT.md",
+  "requiredCapabilities": ["Select/Listbox", "Date", "Form", "Scrollbar", "Toast", "CRUD"],
+  "ownership": {
+    "Select/Listbox": "authored",
+    "Date": "native"
+  },
+  "requiredCommands": ["frontend", "types", "build", "backend"],
+  "commands": {
+    "frontend": "npm run check",
+    "types": "npm run types:check",
+    "build": "npm run build",
+    "backend": "php artisan test"
+  },
+  "evidence": {
+    "crudFullFlow": "tests/Feature/MasterData/ProductManagementTest.php",
+    "failurePaths": "tests/Feature/MasterData/ProductManagementTest.php"
+  }
+}
